@@ -1,3 +1,9 @@
+
+![Moviedbgif](https://github.com/brunogrighes/moviedbb1/assets/67521631/733b87a2-a992-4fe1-a620-df56a01677a8)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
