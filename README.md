@@ -1,5 +1,6 @@
 
-![Moviedbgif](https://github.com/brunogrighes/moviedbb1/assets/67521631/733b87a2-a992-4fe1-a620-df56a01677a8)
+![gif moviedb](https://github.com/brunogrighes/moviedbb1/assets/67521631/17e6bcdd-df81-496b-abb9-e6625a58fb54)
+
 
 
 
