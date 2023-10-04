@@ -9,55 +9,52 @@ function App() {
   const [state, setState] = useState({
     s: "",
     results: [],
-    selected: {},
+    selected: {}
   });
-   const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
+  const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
 
   const search = (e) => {
     if (e.key === "Enter") {
       axios(apiurl + "&s=" + state.s).then(({ data }) => {
-        let result = data.Search;
+        let results = data.Search;
 
-        console.log(data);
-
-        setState((prevState) => {
-          return { ...prevState, results: result };
-        });
-
+        setState(prevState => {
+          return { ...prevState, results: results }
+        })
       });
     }
-  };
-
+  }
+  
   const handleInput = (e) => {
     let s = e.target.value;
 
-    setState((prevState) => {
-      return { ...prevState, s: s };
+    setState(prevState => {
+      return { ...prevState, s: s }
     });
-  };
+  }
 
-  const openPopup = (id) => {
+  const openPopup = id => {
     axios(apiurl + "&i=" + id).then(({ data }) => {
       let result = data;
 
       console.log(result);
 
-      setState((prevState) => {
-        return { ...prevState, selected: result };
+      setState(prevState => {
+        return { ...prevState, selected: result }
       });
     });
-  };
+  }
 
   const closePopup = () => {
-    setState((prevState) => {
-      return { ...prevState, selected: {} };
+    setState(prevState => {
+      return { ...prevState, selected: {} }
     });
-  };
+  }
 
   return (
     <div className="App">
       <header>
-        <h1>Movie DataBase</h1>
+        <h1>Movie Database</h1>
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
